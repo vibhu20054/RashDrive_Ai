@@ -2,34 +2,44 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
-import ReportForm from "@/components/ReportForm";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-[#F2FCE2]">
       <Navbar />
       
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Help Make Our Roads Safer
-          </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Report rash driving incidents easily and contribute to community safety.
-            Upload evidence, and help identify dangerous driving behaviors.
-          </p>
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="space-y-6">
+            <h1 className="text-5xl font-bold text-gray-900 leading-tight">
+              "Report Rash Driving. Make Roads Safer."
+            </h1>
+            <p className="text-xl text-gray-600">
+              Use AI to file instant complaints and track repeat offenders in your area.
+            </p>
+            <div className="flex gap-4">
+              <Button 
+                className="bg-[#ea384c] hover:bg-[#ea384c]/90 text-white px-8 py-6 text-lg rounded-xl"
+                asChild
+              >
+                <Link to="/file-a-report">Report Now</Link>
+              </Button>
+              <Button 
+                className="bg-[#ea384c] hover:bg-[#ea384c]/90 text-white px-8 py-6 text-lg rounded-xl"
+                asChild
+              >
+                <Link to="/how-it-works">How It Works</Link>
+              </Button>
+            </div>
+          </div>
+          <div className="relative">
+            <img
+              src="/lovable-uploads/342cf230-8b08-409a-9bd9-fc16046f1aef.png"
+              alt="Rash driving reporting illustration"
+              className="w-full h-auto"
+            />
+          </div>
         </div>
-
-        <div className="flex justify-center gap-4 mb-12">
-          <Button asChild>
-            <Link to="/report">Report Incident</Link>
-          </Button>
-          <Button variant="outline" asChild>
-            <Link to="/how-it-works">How It Works</Link>
-          </Button>
-        </div>
-
-        <ReportForm />
       </main>
 
       <footer className="border-t border-gray-200 mt-16">
