@@ -19,6 +19,11 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/how-it-works" element={<HowItWorks />} />
+          <Route path="/file-a-report" element={<NotFound />} />
+          <Route path="/view-cases" element={<NotFound />} />
+          <Route path="/contact-us" element={<NotFound />} />
+          <Route path="/login" element={<NotFound />} />
+          <Route path="/signup" element={<NotFound />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

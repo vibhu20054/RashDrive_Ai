@@ -1,6 +1,7 @@
-
-import { CheckCircle2, Brain, Bell, ShieldCheck, CheckSquare, Activity } from "lucide-react";
+import { CheckCircle2, Brain, Bell, ShieldCheck, CheckSquare, Activity, ArrowLeft } from "lucide-react";
+import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
+import { Button } from "@/components/ui/button";
 
 const HowItWorks = () => {
   return (
@@ -8,6 +9,15 @@ const HowItWorks = () => {
       <Navbar />
       
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="mb-8">
+          <Button variant="ghost" className="flex items-center gap-2 text-gray-600 hover:text-gray-900" asChild>
+            <Link to="/">
+              <ArrowLeft className="w-4 h-4" />
+              Back to Home
+            </Link>
+          </Button>
+        </div>
+
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900">How Rash Driving Detector Works</h1>
           <p className="mt-4 text-xl text-gray-600">
@@ -17,37 +27,37 @@ const HowItWorks = () => {
 
         <div className="space-y-8">
           <StepCard
-            icon={<CheckCircle2 className="w-8 h-8 text-blue-500" />}
+            icon={<CheckCircle2 className="w-8 h-8 text-red-500" />}
             title="Acknowledgment & Complaint ID"
             description="Upon successful upload, receive immediate confirmation and a unique Complaint ID via email/SMS."
           />
 
           <StepCard
-            icon={<Brain className="w-8 h-8 text-blue-500" />}
+            icon={<Brain className="w-8 h-8 text-red-500" />}
             title="Automated AI/ML Analysis"
             description="Our system analyzes your submission within 5 minutes, tracking vehicles and computing metrics."
           />
 
           <StepCard
-            icon={<Bell className="w-8 h-8 text-blue-500" />}
+            icon={<Bell className="w-8 h-8 text-red-500" />}
             title="Initial Outcome & Notification"
             description="Receive notifications about the analysis results, whether it's 'No Issue' or 'Rash Driving Detected'."
           />
 
           <StepCard
-            icon={<ShieldCheck className="w-8 h-8 text-blue-500" />}
+            icon={<ShieldCheck className="w-8 h-8 text-red-500" />}
             title="Police Review & Action"
             description="Local enforcement reviews evidence and takes appropriate action - issuing fines or requesting more information."
           />
 
           <StepCard
-            icon={<CheckSquare className="w-8 h-8 text-blue-500" />}
+            icon={<CheckSquare className="w-8 h-8 text-red-500" />}
             title="Case Closure"
             description="Once resolved, receive a final summary email with the outcome details."
           />
 
           <StepCard
-            icon={<Activity className="w-8 h-8 text-blue-500" />}
+            icon={<Activity className="w-8 h-8 text-red-500" />}
             title="Real-time Updates"
             description="Track your complaint status in real-time through your dashboard. Get notified at every stage - from initial submission to final resolution."
           />
