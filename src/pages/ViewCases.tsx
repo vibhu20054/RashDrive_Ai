@@ -1,4 +1,3 @@
-
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -13,29 +12,29 @@ import {
 
 const ViewCases = () => {
   return (
-    <div className="min-h-screen bg-[#1A1F2C] p-6">
+    <div className="min-h-screen bg-[#F2FCE2] p-6">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center mb-8">
-          <Button variant="ghost" className="text-white" asChild>
+          <Button variant="ghost" className="text-gray-900" asChild>
             <Link to="/">
               <ArrowLeft className="mr-2" />
               Back to Home
             </Link>
           </Button>
-          <Button className="bg-[#0FA0CE] hover:bg-[#0FA0CE]/90" asChild>
+          <Button className="bg-[#ea384c] hover:bg-[#ea384c]/90" asChild>
             <Link to="/file-a-report">Report New Incident</Link>
           </Button>
         </div>
 
-        <h1 className="text-2xl font-bold text-white mb-8">Complaints Dashboard</h1>
+        <h1 className="text-2xl font-bold text-gray-900 mb-8">Complaints Dashboard</h1>
 
         <div className="space-y-8">
           <div>
-            <h2 className="text-xl text-white mb-4 flex items-center gap-2">
+            <h2 className="text-xl text-gray-900 mb-4 flex items-center gap-2">
               <span className="text-yellow-500">⌛</span> 
               Pending Complaints
             </h2>
-            <div className="bg-white/5 backdrop-blur-sm rounded-lg overflow-hidden">
+            <div className="bg-white/80 backdrop-blur-sm rounded-lg overflow-hidden">
               <Table>
                 <TableHeader>
                   <TableRow>
@@ -70,11 +69,11 @@ const ViewCases = () => {
           </div>
 
           <div>
-            <h2 className="text-xl text-white mb-4 flex items-center gap-2">
+            <h2 className="text-xl text-gray-900 mb-4 flex items-center gap-2">
               <span className="text-green-500">✓</span>
               Resolved Complaints
             </h2>
-            <div className="bg-white/5 backdrop-blur-sm rounded-lg overflow-hidden">
+            <div className="bg-white/80 backdrop-blur-sm rounded-lg overflow-hidden">
               <Table>
                 <TableHeader>
                   <TableRow>
