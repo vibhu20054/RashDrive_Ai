@@ -32,11 +32,11 @@ const Index = () => {
               </Button>
             </div>
           </div>
-          <div className="relative">
+          <div className="relative flex justify-center items-center">
             <img
-              src="/lovable-uploads/342cf230-8b08-409a-9bd9-fc16046f1aef.png"
+              src="/lovable-uploads/7537b203-8995-419a-af77-ab0b8fba4ca8.png"
               alt="Rash driving reporting illustration"
-              className="w-full h-auto"
+              className="w-full max-w-[600px] h-auto object-contain"
             />
           </div>
         </div>
@@ -52,3 +52,4 @@ const Index = () => {
 };
 
 export default Index;
+
